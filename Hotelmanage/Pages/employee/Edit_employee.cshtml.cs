@@ -38,7 +38,7 @@ namespace Hotelmanage.Pages.employee
             {
                 SqlConnection connection = new SqlConnection(connectionstring);
                 connection.Open();
-                string sql = "UPDATE employee set"+
+                string sql = "update emplooyee set"+
                      "name = '" + name + "'," +
                     "gender = '" + gender + "'," +
                     "address = '" + address + "'," +
