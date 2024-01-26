@@ -1,0 +1,32 @@
+  <thead>
+      <tr class="bg-success text-ligth">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Action</th>
+
+      </tr>
+  </thead>
+  <tbody>
+      @foreach (var row in Model.emplooyeelist)
+      {
+        <tr>
+            <td>@row.id</td>
+             <td>@row.name</td>
+             <td>@row.gender</td>
+             <td>@row.address</td>
+              <td>@row.phone</td>
+        </tr>
+
+      }
+  </tbody>
+
+
+
+
+
+
+// assisments 
+data from table

@@ -1,0 +1,69 @@
+﻿@page
+@model Hotelmanage.Pages.employee.Edit_emplotyeeModel
+@{
+
+}
+@if (Model.errormsg.Length > 0)
+{
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.errormsg
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+
+    </div>
+
+}
+
+<div class ="container">
+
+    <center>
+        <h1>Prison management</h1>
+        <h1>Edit Staff Prison</h1>
+    </center>
+    <div class="card mx-auto" style="width:50%"> 
+        <div class="card-body">
+        <h3 class="card-header">Edit</h3>
+        <form method="POST">
+            <inpu type="text" name="id" value="@Model.employeeinfo.id">
+                <div class="row">
+                    <div class="col">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" autocomplete="off"
+                          required  value="@Model.employeeinfo.name">
+                    </div>
+
+                    <div class="col">
+                        <label>Gender</label>
+                        <select name="gender" class="form-control" autocomplete="off" required>
+                            <option value="@Model.employeeinfo.gender">@Model.employeeinfo.gender</option>
+                            <option value=""></option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Address</label>
+                        <input type="text" name="address" class="form-control" autocomplete="off"
+                               required value="@Model.employeeinfo.address"/>
+                    </div>
+                    <div class="col">
+                        <label>phone</label>
+                        <input type="text" name="phone" class="form-control" autocomplete="off"
+                               required value="@Model.employeeinfo.phone" />
+                    </div>
+                </div>
+                   <br/>
+            <center>
+                    <a style="width:80px" class="btn btn-dark rounded-pill" href="/employee/Index">Back</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button  sty="width: 100px;"type="submit" class="btn btn-success rounded-pill">Update</button>
+            
+            </center>
+        </form>
+       </div>
+</div>
+       
+</div>
+

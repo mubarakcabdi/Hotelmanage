@@ -1,0 +1,53 @@
+<script>
+    // Use jQuery in noConflict mode
+    jQuery(document).ready(function ($) {
+        $('#mytable').DataTable({
+            //"order": [0,asc],
+            order: [0, 'desc'],
+            mark: true,
+            dom: 'Bfrtip',
+            lengthMenu: [
+                [10, 25, 50, 100, -1],
+                ['10 rows', '25 rows', '50 rows', '100 rows', 'Show All']
+            ],
+            buttons: [
+                'pageLength',
+                {
+                    extend: 'copyHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'excelHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'csvHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                'colvis'
+            ],
+            columnDefs: [{
+                targets: -1,
+                visible: false
+            }]
+        });
+    });
+</script>

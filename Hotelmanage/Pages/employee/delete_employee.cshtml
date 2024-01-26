@@ -1,0 +1,23 @@
+﻿@page
+@using System.Data.SqlClient;
+@{
+
+    string connectionstring = "Data Source=DESKTOP-9GQQRHD\\SQLEXPRESS;Initial Catalog=Hotel;Integrated Security=True;Encrypt=False;";
+    string id = Request.Query["id"];
+    try
+    {
+        SqlConnection connection = new SqlConnection(connectionstring);
+        connection.Open();
+        string sql = "delete from employee where id= '" + id + "' ";
+        SqlCommand command = new SqlCommand(sql, connection);
+        command.ExecuteNonQuery();
+        connection.Close();
+    }catch (Exception ex)
+    {
+        return;
+    }
+
+    Response.Redirect("/employee/Index");
+}
+
+

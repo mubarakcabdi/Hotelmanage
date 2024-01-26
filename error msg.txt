@@ -1,0 +1,21 @@
+        public String errormsg = "";
+
+
+
+
+ errormsg = ex.Message;
+                return;
+
+
+
+
+@if (Model.successmsg.Length > 0)
+{
+	
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+	 @Model.successmsg
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+      
+   </div>
+
+}

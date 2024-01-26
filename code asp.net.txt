@@ -1,0 +1,53 @@
+create table emplooyee
+(
+id int INDTITY(1,1) primary key not null,
+name varchart(250) not null,
+gender varchart(250) not null,
+address varchart(250) not null,
+phone int(200) not null,
+)
+
+    //index.cshtm
+
+     <center>
+<h1> Store App</h1>
+<h4>View emplooyee</h4>
+      </center>
+
+<a style="width:100px" href="#" class="btn btn-dark rounded-pell">Add</a> <br> <br>
+
+<table class="table table-striped table-bordered">
+  <thead>
+     <tr class="bg-success text-ligth">
+       <th>ID</th>  
+       <th>Name</th>  
+       <th>Gender</th>     
+       <th>Address</th>  
+       <th>Phone</th>  
+       <th>Action</th> 
+
+      </tr>
+  </thead>
+    
+</table>
+
+
+
+
+  // layout
+
+ <li class="nav-item">
+     <a class="nav-link text-dark" asp-area="" asp-page="/emplooyee/Index">Emplooyee</a>
+ </li>
+
+     //c#
+
+3 using System.Data.Sqlclient;
+{
+
+}
+
+
+
+
+
